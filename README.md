@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8-informational)](https://www.python.org/)
 [![Code style: Black](https://img.shields.io/badge/Code%20style-Black-000.svg)](https://github.com/psf/black)
 [![Tests](https://github.com/quantumapplicationlab/qubols/actions/workflows/build.yml/badge.svg)](https://github.com/quantumapplicationlab/qubols/actions/workflows/build.yml)
-[![Coverage](https://coveralls.io/repos/github/quantumapplicationlab/qubols/badge.svg?branch=main)](https://coveralls.io/github/quantumapplicationlab/qubols?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/QuantumApplicationLab/qubols/badge.svg?branch=master)](https://coveralls.io/github/QuantumApplicationLab/qubols?branch=master)
 
 
 ![qubols](./docs/qubols_illustration.png)
