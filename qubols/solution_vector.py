@@ -4,7 +4,6 @@ from .encodings import RangedEfficientEncoding
 
 
 class SolutionVector(object):
-
     def __init__(self, size, nqbit, encoding, range=1.0, offset=0.0, base_name="x"):
         """Encode the solution vector in a list of RealEncoded
 
@@ -37,7 +36,7 @@ class SolutionVector(object):
             list[RealEncoded]:
         """
         encoded_reals = []
-        is_ranged_encoding = (self.encoding == RangedEfficientEncoding)
+        is_ranged_encoding = self.encoding == RangedEfficientEncoding
         for i in range(self.size):
             var_base_name = self.base_name + "_%03d" % (i + 1)
             if is_ranged_encoding:

@@ -8,7 +8,6 @@ from .solution_vector import SolutionVector
 
 
 class QUBOLS:
-
     def __init__(self, options: Optional[Union[Dict, None]] = None):
         """Linear Solver using QUBO
 
