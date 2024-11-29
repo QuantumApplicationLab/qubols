@@ -20,7 +20,7 @@ size = 4
 
 @pytest.mark.parametrize("A", [create_random_matrix(size)])
 @pytest.mark.parametrize("b", [np.random.rand(size)])
-def test_hhl_solve_default(A, b):
+def test_qubo(A, b):
     """Test the qubols solver."""
     options = {
         "num_reads": 50,
