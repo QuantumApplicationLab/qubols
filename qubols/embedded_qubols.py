@@ -1,7 +1,7 @@
 import numpy as np
 from qubols.encodings import RealUnitQbitEncoding
 from typing import Optional, Union, Dict
-import neal
+from dwave.samplers import SimulatedAnnealingSampler
 import dwave_networkx as dnx
 from minorminer import find_embedding
 from dwave.embedding import embed_qubo, majority_vote, chain_break_frequency
@@ -18,7 +18,7 @@ class EmbeddedQUBOLS(QUBOLS):
         """
 
         self.default_solve_options = {
-            "sampler": neal.SimulatedAnnealingSampler(),
+            "sampler": SimulatedAnnealingSampler(),
             "encoding": RealUnitQbitEncoding,
             "num_qbits": 11,
             "num_reads": 100,
@@ -70,7 +70,7 @@ class EmbeddedQUBOLS(QUBOLS):
         """Solve the linear system
 
         Args:
-            sampler (_type_, optional): _description_. Defaults to neal.SimulatedAnnealingSampler().
+            sampler (_type_, optional): _description_. Defaults to SimulatedAnnealingSampler().
             encoding (_type_, optional): _description_. Defaults to RealUnitQbitEncoding.
             nqbit (int, optional): _description_. Defaults to 10.
 

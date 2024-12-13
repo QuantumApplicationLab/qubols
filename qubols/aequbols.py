@@ -1,7 +1,7 @@
 import numpy as np
 from qubols.encodings import RangedEfficientEncoding
 from typing import Optional, Union, Dict
-import neal
+from dwave.samplers import SimulatedAnnealingSampler
 
 from .qubols import QUBOLS
 
@@ -21,7 +21,7 @@ class AEQUBOLS(QUBOLS):
         """
 
         default_solve_options = {
-            "sampler": neal.SimulatedAnnealingSampler(),
+            "sampler": SimulatedAnnealingSampler(),
             "encoding": RangedEfficientEncoding,
             "range": 1.0,
             "offset": 0.0,
@@ -42,7 +42,7 @@ class AEQUBOLS(QUBOLS):
         """Solve the linear system
 
         Args:
-            sampler (_type_, optional): _description_. Defaults to neal.SimulatedAnnealingSampler().
+            sampler (_type_, optional): _description_. Defaults to SimulatedAnnealingSampler().
             encoding (_type_, optional): _description_. Defaults to RealUnitQbitEncoding.
             nqbit (int, optional): _description_. Defaults to 10.
 
